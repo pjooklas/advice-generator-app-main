@@ -13,28 +13,55 @@ $darkBlue: hsl(218, 23%, 16%);
 
 body {
     background-color: $darkBlue;
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
 }
 
 .container {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     background-color: $darkGrayishBlue;
+    width: 375px;
+    display: grid;
+    grid-template-rows: 1fr 2fr 1fr;
+    row-gap: 0.5rem;
+    place-items: center;
+    padding: 1rem 1rem 0 1rem;
+    border-radius: 10px;
 
-    #id {
-        color: $neonGreen;
-        font-size: 11px;
-        font-family: 'Manrope', sans-serif;
+    #id {        
+        h1 {
+            font-weight: 100;
+            color: $neonGreen;
+            font-size: 11px;
+            font-family: 'Manrope', sans-serif;
+            text-align: center;
+        }
     }
 
     #advice {
         color: $lightCyan;
         font-size: 28px;
         font-family: 'Manrope', sans-serif;
+        text-align: center;
     }
 }
 
 button {
+    position: relative;
+    top: 50%;
     border-radius: 50%;
+    border: none;
+    background-color: $neonGreen;
     img {
         padding: 1rem;
     }
+}
+
+button:hover {
+    box-shadow: 0px 0px 1rem 0.5rem $neonGreen;
 }
 

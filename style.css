@@ -7,29 +7,58 @@
 
 body {
   background-color: #1f2632;
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
 }
 
 .container {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
   background-color: #323a49;
+  width: 375px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-rows: 1fr 2fr 1fr;
+      grid-template-rows: 1fr 2fr 1fr;
+  row-gap: 0.5rem;
+  place-items: center;
+  padding: 1rem 1rem 0 1rem;
+  border-radius: 10px;
 }
 
-.container #id {
+.container #id h1 {
+  font-weight: 100;
   color: #52ffa8;
   font-size: 11px;
   font-family: 'Manrope', sans-serif;
+  text-align: center;
 }
 
 .container #advice {
   color: #cee3e9;
   font-size: 28px;
   font-family: 'Manrope', sans-serif;
+  text-align: center;
 }
 
 button {
+  position: relative;
+  top: 50%;
   border-radius: 50%;
+  border: none;
+  background-color: #52ffa8;
 }
 
 button img {
   padding: 1rem;
+}
+
+button:hover {
+  -webkit-box-shadow: 0px 0px 1rem 0.5rem #52ffa8;
+          box-shadow: 0px 0px 1rem 0.5rem #52ffa8;
 }
 /*# sourceMappingURL=style.css.map */
